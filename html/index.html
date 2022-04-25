@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+  <head>
+      <title>Ferrano</title>
+      <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+      <script src="https://kit.fontawesome.com/f0729c0c03.js" crossorigin="anonymous"></script>
+      <style>
+        * {box-sizing: border-box; margin:0; padding:0;}
+           ul,li,ol {list-style:none;}
+      
+        /*슬라이더*/
+        #top {width:100%; height:947px; background-color:gold;position:relative;}
+        #slider {width:100%; height:947px; background-image:url(img/header.jpg); background-repeat:no-repeat;background-size:cover;z-index:1; position:absolute;top:0;left:0;}
+
+        /*헤더*/
+        header {width:1246px; height:947px; background-color:red; z-index: 3;  margin:0 auto 0; position:relative;  z-index:3; top:0px;}
+        
+        /**네비게이션*/
+        #nav_bar {width:1246px; height:115px; background-color:beige; float:left;}
+        #nav_bar > #logo > h2 {background-color:yellowgreen;margin:10px;width:142.31px;padding:3px 0 0;text-align:center;margin:50px 0 0 50px;}
+        #nav_bar > #logo > h2 a {text-decoration:none;color:#eee;}
+        #nav_bar > #logo > h2 a:hover {color:#dba94b;}
+        
+        .navmenu {width:500px; height:50px; background-color: pink;margin:-45px 0 0 700px;}
+        .navmenu > ul > .home {color:#dba94b;font-weight:bold;}
+        .navmenu > ul > li { font-size:12px; float:left;margin: 10px 0 0 15px;padding:15px 12px;}
+        .navmenu > ul > li a {text-decoration:none;color:#eee;font-weight:bold;}
+        .navmenu > ul > .reserve {text-decoration:none; border:1px solid #dba94b; padding:10px 12px 9px; border-radius:5px;}
+        .navmenu > ul > .reserve a {text-decoration:none; color:#eee;font-weight:bold;}
+        .reserve:hover {background-color:#dba94b;}
+
+        /*상품슬라이더 context*/
+        .container {width:100%; height:454px; background-color:green;float:left; margin:100px 0 0 0;}
+        .container > h3 {text-align:center;color:#dba94b;margin:100px 0 0 0;font-size:24px;}
+        .container > h1 {text-align:center; color:#eee;margin:20px 0 0 0;font-size:48px}
+        .viewmenu {width:150px;padding:15px 35px; color:#eee;border:1px solid #dba94b; border-radius:5px;margin:20px auto;}
+        .viewmenu a {font-size:12px; color:#eee;text-decoration:none;}
+        .viewmenu:hover {background-color:#dba94b;}
+
+        /*매점 정보section*/
+     section {width:100%; height:10000px;}
+        #about {width:100%; height:1035px; background-color:gold;float:left;}
+      #abouttext {width:468px; height:237px; background-color:beige;margin:50px auto 0;}
+      #aboutimg1 {width:120px; height:21px; margin:0 auto;}
+      #aboutimg1 > img{width:100%; height:100%;margin:0 auto;}
+      #about > #abouttext > .abouttext1 {text-align:center;background-color:pink; font-size:30px;margin:20px auto;}
+      #about > #abouttext > .abouttext2 {text-align:center;background-color:green;font-size:34px;margin:20px auto;}
+      #about > #abouttext > p {text-align:center; font-size:12px;margin:10px;}
+
+      #aboutimg2 {width:870px;height:642.34px; background-color:beige; margin:0 auto;}
+      #aboutimg2 > img {width:100%; height:100%;}
+
+      /*음식 상품정보1*/
+       #uppertitle {width:100%; height:1068.05px; background-color:#fff9ee;float:left;background-image:linear-gradient( #fff9ee 53%, rgba(255, 249, 238, 0.8)),url(img/background1.jpg);background-size:cover;background-repeat:no-repeat;}
+       .uppertext {width:468px; height:237px; background-color:beige;margin:50px auto 0;}
+       #upperimg {width:120px; height:21px; margin:0 auto;}
+      #upperimg > img {width:100%; height:100%;margin:0 auto;}
+      #uppertitle > .uppertext > .uppertext1 {text-align:center;background-color:beige; font-size:30px;margin:20px auto;}
+      #uppertitle > .uppertext > .uppertext2 {text-align:center;background-color:green;font-size:34px;margin:20px auto;}
+      #uppertitle > .uppertext > p {text-align:center; font-size:12px;margin:10px;}
+      
+      #upperimg2 {width:1200px; height:650px; background-color:#fff9ee;margin:0 auto;}
+      #upperimg2 > .block {width:380px; height:300px; background-color:blue;display:inline-block;margin:12px 0 0 12px;position:relative;}
+      .block > a img {width:100%; height:100%}
+      .blocktext1 {width:200px; height:24px;display:block;background-color:rgb(30, 29, 47,0.7); position:absolute;top:270px; left:0; text-align:center;text-decoration:none; border-radius:5px;}
+      .block > a .blocktext1 {font-size:14px; color:#dba94b;} 
+      .blocktext2 {width:50px; height:24px;display:block;background-color:#dba94b; position:absolute;top:270px; left:200px; text-align:center; text-decoration:none;border-radius:5px;}
+      .block > a .blocktext2 {font-size:14px; color:#eee;font-size:14px; color:#eee;}
+      
+      /*사실 타이틀*/
+      #facts {width:100%; height:455px; background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/background2.jpg);float:left;background-position:0px 0px,50% 100%;background-repeat:no-repeat; background-size:auto, cover;background-attachment: scroll, fixed;}
+      #bigfact {width:1400px; height: 243px; background-color:yellowgreen; margin:100px auto 0;}
+      #facts > #bigfact > .fact {float:left;}
+      #facts > #bigfact > .fact > .factbox {width:300px; height:205px;display:inline-block; margin:20px 0 0 55px;border-right:2px solid rgb(219, 169, 75, 0.5)}
+      #facts > #bigfact > .fact > .factbox1 {width:300px; height:205px;display:inline-block; margin:20px 0 0 17px;border-right:2px solid rgb(219, 169, 75, 0.5)}
+      #facts > #bigfact > .fact > #factbox2 {width:300px; height:205px;display:inline-block; margin:20px 0 0 17px;border-right:2px solid rgb(219, 169, 75, 0.5)}
+      #facts > #bigfact > .fact > #factbox3 {width:300px; height:205px;display:inline-block; margin:20px 0 0 17px;}
+      .factbox > .facttext {text-align:center;margin:50px auto 0; color:#dba94b; font-size:50px;}
+      .factbox1 >.facttext {text-align:center;margin:50px auto 0; color:#dba94b; font-size:50px;}
+      #factbox2 > .facttext {text-align:center;margin:50px auto 0; color:#dba94b; font-size:50px;}
+      #factbox3 >.facttext {text-align:center;margin:50px auto 0; color:#dba94b; font-size:50px;}
+      
+      #factimg {width:120px; height:21px; margin:10px auto 0;}
+      #factimg > img {width:100%; height:100%;}
+      .facttext2 {text-align:center;margin:10px auto 0; color:#eee;font-size:20px; text-transform:uppercase;}
+
+      /*음식 메뉴*/
+      #foodmenu {width:100%; height:964.05px;background-image:url(img/background3.png);background-repeat:no-repeat; background-size:cover;float:left;}
+      .foodtext {width:468px; height:237px; background-color:beige;margin:50px auto 0;}
+      #foodimg {width:120px; height:21px; margin:10px auto 0;}
+      #foodimg > img {width:100%; height:100%;}
+      #foodmenu > .foodtext > .foodtext1 {text-align:center;background-color:beige; font-size:30px;margin:20px auto;}
+      #foodmenu > .foodtext > .foodtext2 {text-align:center;background-color:green;font-size:34px;margin:20px auto;}
+      #foodmenu > .foodtext > p {text-align:center; font-size:12px;margin:10px;}
+
+      #bigbutton {width:600px; height:100px; background-color:green;margin:0 auto;}
+      #bigbutton > .btn1 {text-transform:uppercase;background-color:rgba(26, 29, 46, 0.97);padding:20px 50px;border:none;border-radius:5px;}
+      .btn1 a {text-decoration:none;color:#eee;}
+      #bigbutton >.btn2 {text-transform:uppercase;background-color:#dba94b;padding:20px 50px;border:none;border-radius:5px;margin:0 auto;}
+      .btn2 a {text-decoration:none;color:#eee;}
+      #bigbutton >.btn2:hover{background-color:rgba(26, 29, 46, 0.97);}
+
+      #bigfood {width:1200px; height:547px; background-color:beige;margin:0 auto;}
+      #bigfood > .foodimgbox {width:1196px; height:120px; background-color:yellowgreen;display:inline;float:left; margin:20px;}
+      #bigfood > .foodimgbox > a img {width:120px; height:100%;float:left;}
+      #bigfood > .foodimgbox > #dollar {width:120px; height:100%;background-color:cyan;float:right;}
+
+      #bigfood > .foodimgbox > .foodtextbox {width:896px; height:100px;background-color:green;float:left; display:inline;}
+
+      /*최근 레시피*/
+      .recent {width:100%; height:537.05px;background-image:linear-gradient(rgba(0, 0, 0, 0.61),rgba(0, 0, 0, 0.61)),url(img/background3.jpg); background-position:0px 0px,50% 50%;
+        background-repeat:no-repeat; background-size:auto, cover; margin:0 auto; float:left;background-attachment: scroll, fixed;}
+      #recenttext {width:468px; height:167px; background-color:cyan;margin:100px auto 0;}
+      #recentimg {width:120px; height:21px; margin:10px auto 0;}
+      #recentimg > img {width:100%; height:100%;}
+      .recenttext1 {color:#dba94b;text-align:center;font-size:30px;margin:10px 0 0 0;}
+      .recenttext2 {color:#eee;text-align:center;font-size:34px;} 
+      
+      #recentimg1 {width:100%; height:270px; background-color:beige;float:left;}
+      .boximg {width:16.666%;height:100%;background-color:pink; float:left;}
+      .recipebox1 {width:100%; height:100%;background-image:url(img/boximg1.jpg);background-size:cover;background-position:50% 50%;}
+      .recipebox2 {width:100%; height:100%;background-image:url(img/boximg2.jpg);background-size:cover;background-position:50% 50%;}
+      .recipebox3 {width:100%; height:100%;background-image:url(img/boximg3.jpg);background-size:cover;background-position:50% 50%;}
+      .recipebox4 {width:100%; height:100%;background-image:url(img/boximg4.jpg);background-size:cover;background-position:50% 50%;}
+      .recipebox5 {width:100%; height:100%;background-image:url(img/boximg5.jpg);background-size:cover;background-position:50% 50%;}
+      .recipebox6 {width:100%; height:100%;background-image:url(img/boximg6.jpg);background-size:cover;background-position:50% 50%;}
+
+      .iconwrapper {width:100%;height:100%;float:left;opacity:0;}
+      .iconwrapper:hover { background-color:rgba(26, 29, 46, 0.85);opacity:1;}
+      #iconimg {width:30px; height:30px;  margin:120px 0 0 133px; color:#eee; font-size:30px;}
+
+     /*팀소개*/
+      #team {width:100%; height:1076px; background-color:green;float:left;}
+      .teamtext {width:468.45px; height:237.05px; background-color: beige;margin:0 auto;}
+      .teamimg {width:120px; height:21px; margin:10px auto 0;}
+      .teamimg > img {width:100%; height:100%;}
+      .teamtext1 {text-align:center;background-color:beige; font-size:30px;margin:20px auto;color:#dba94b;}
+      .teamtext2 {text-align:center;background-color:green;font-size:34px;margin:20px auto;color:}
+      .teamtext3 {text-align:center; font-size:12px;margin:10px;}
+
+      #peoplewrapper {width:1200px; height:700px; background-color:red; margin:10px auto 0;}
+      .people {width:378.66px; height:473.31px; background-color:gold; display:inline-block; margin:5px 0 0 12px;}
+      .people > img {width: 100%; height: 100%;}
+      
+      .teamtitle {width:378.66px; height:30px; background-color:aquamarine; display:inline-block; text-align: center;margin:10px 0 0 12px;font-size:20px;color:#dba94b;}
+      .teamname {width:378.66px; height:30px; background-color:aquamarine; display:inline-block; text-align: center;margin:10px 0 0 12px;font-size:18px;}
+      
+      #social {width:250px; height:24px; background-color:beige;margin:10px 0 0 110px;float:left;}
+      .icon {width:35px; height:35px;font-size:15px; background-color:#dba94b;border-radius:5px;float:left; margin:5px;text-align:center;}
+      a .icon { text-decoration: none; color:#eee;}
+      #social > a > .icon > i {margin:9px 0px 0 12px;float:left;}
+      .icon:hover {background-color:#212435;transition: all 0.5s ease;}      
+      
+      #social2 {width:250px; height:24px; background-color:beige;margin:10px 0 0 140px;float:left;}
+      .icon1 {width:35px; height:35px;font-size:15px; background-color:#dba94b;border-radius:5px;float:left; margin:5px;text-align:center;}
+      a .icon1 { text-decoration: none; color:#eee;}
+      #social2 > a > .icon1 > i {margin:9px 0px 0 12px;float:left;}
+      .icon1:hover {background-color:#212435;transition: all 0.5s ease;}    
+      
+      #social3 {width:250px; height:24px; background-color:beige;margin:10px 0 0 150px;float:left;}
+      .icon2 {width:35px; height:35px;font-size:15px; background-color:#dba94b;border-radius:5px;float:left; margin:5px;text-align:center;}
+      a .icon2 { text-decoration: none; color:#eee;}
+      #social3 > a > .icon2 > i {margin:9px 0px 0 12px;float:left;}
+      .icon2:hover {background-color:#212435;transition: all 0.5s ease;}    
+
+
+      </style>
+  </head>
+
+  <body>
+    <div id ="top">  
+      <div id="slider">
+    
+        
+      </div>
+
+   
+      <header>
+        
+        
+        <!--네비게이션-->
+        
+        <div id="nav_bar">
+            <div id="logo">
+                <h2><a href="#">Ferrano</a></h2>
+            </div>
+            <nav class="navmenu">
+                <ul>
+                    <li class="home">HOME</li>
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="">MENU</a></li>
+                    <li><a href="">BLOG</a></li>
+                    <li class="reserve"><a href="">RESERVE</a></li>
+                </ul>
+            </nav>
+        
+        </div>
+
+        <!--상품슬라이더 context-->
+        <div class="container">
+            <h3>Welcome to Our Bistro</h3>
+            <h1>-FERRANO-</h1>
+            <div class="viewmenu"><a href="#">VIEW MENUS</a></div>
+        </div>
+
+      </header>
+    </div>
+
+      <section>
+        <>
+        <div id="about">
+          <div id="abouttext">
+            <div id="aboutimg1"><img src="img/ornament.jpg" alt="ornament"></div>
+            <h4 class="abouttext1">About our bistro</h4>
+            <h3 class="abouttext2">-WE ARE FERRANO-</h3>
+            <p>Look at your waiter's face. He knows. It's another reason to be polite to your
+              waiter: he could save your life with a raised eyebrow or a sigh</p>
+          </div>
+        <div id="aboutimg2">
+          <img src="img/food.png" alt="food">
+        </div>
+
+        </div>
+
+        <!--음식 상품정보1-->
+        <div id="uppertitle">
+          <div class="uppertext">
+            <div id="upperimg"><img src="img/ornament.jpg" alt="ornament"></div>
+            <h2 class="uppertext1">Offers from the house chef.</h2>
+            <h3 class="uppertext2">-MEAL OF THE DAY-</h3>
+            <p>Look at your waiter's face. He knows. It's another reason to be polite to your
+              waiter: he could save your life with a raised eyebrow or a sigh</p>
+          </div>
+
+          <div id="upperimg2">
+            <div class="block"><a href="#"><img src="img/food1.jpg" alt="food1"></a>
+            <a href="#"><span class="blocktext1">Pomegranate</span></a>
+            <a href="#"><span class="blocktext2">$24</span></a>
+            </div>
+            <div class="block"><a href="#"><img src="img/food2.jpg" alt="food1"></a>
+              <a href="#"><span class="blocktext1">Yogurt Bowls</span></a>
+              <a href="#"><span class="blocktext2">$22</span></a>
+            </div>
+            <div class="block"><a href="#"><img src="img/food3.jpg" alt="food1"></a>
+              <a href="#"><span class="blocktext1">A La Napolitana</span></a>
+              <a href="#"><span class="blocktext2">$32</span></a>
+            </div>
+            <div class="block"><a href="#"><img src="img/food4.jpg" alt="food1"></a>
+              <a href="#"> <span class="blocktext1">Seafood Parcels</span></a>
+              <a href="#"><span class="blocktext2">$17</span></a>
+            </div>
+            <div class="block"><a href="#"><img src="img/food5.jpg" alt="food1"></a>
+              <a href="#"> <span class="blocktext1">Creamy Coconut</span></a>
+              <a href="#"><span class="blocktext2">$24</span></a>
+            </div>
+            <div class="block"><a href="#"><img src="img/food6.jpg" alt="food1"></a>
+              <a href="#"> <span class="blocktext1">Parmesen Shrimp</span></a>
+              <a href="#"><span class="blocktext2">$24</span></a>
+            </div>
+          </div>
+        </div>
+
+        <!--사실 타이틀-->
+        <div id="facts">
+          <div id="bigfact">
+            <ul class="fact">
+              <li class="factbox">
+                <h1 class="facttext">365</h1>
+                <div id="factimg"><img src="img/ornament1.png" alt="ornament1"></div>
+                <h2 class="facttext2">service days<h2>
+              </li>
+             
+
+            <li class="factbox1">
+              <h1 class="facttext">26350</h1>
+              <div id="factimg"><img src="img/ornament1.png" alt="ornament1"></div>
+              <h2 class="facttext2">dishes served</h2>
+            </li>
+            
+            <li id="factbox2">
+              <h1 class="facttext">157</h1>
+              <div id="factimg"><img src="img/ornament1.png" alt="ornament1"></div>
+              <h2 class="facttext2">types of wine</h2>
+            </li>
+           
+            <li id="factbox3">
+              <h1 class="facttext">25400</h1>
+              <div id="factimg"><img src="img/ornament1.png" alt="ornament1"></div>
+             <h2 class="facttext2">customer count</h2>
+            </li>
+          </ul>
+        
+          </div>
+        </div>
+
+        <!--음식 메뉴-->
+        <div id="foodmenu">
+          <div class="foodtext">
+              <div id="foodimg"><img src="img/ornament.jpg" alt="ornament"></div>
+              <h2 class="foodtext1">Healthy fresh and hot dishes.</h2>
+              <h3 class="foodtext2">-OUR DELICIOUS MENUS-</h3>
+              <p>Look at your waiter's face. He knows. It's another reason to be polite to your
+                waiter: he could save your life with a raised eyebrow or a sigh</p>
+            </div>
+            <div id="bigbutton">
+            <button class="btn1" class="on"><a href="#">lunch menu</a></button>
+            <button class="btn2"><a href="#">dinner menu</a></button>
+            <button class="btn2"><a href="#">appetizers</a></button>
+            </div>
+          <div id="bigfood">
+            <div class="foodimgbox"><a href="#"><img src="img/food3.jpg" alt="food3"></a>
+            <div class="foodtextbox">
+              <h1>Parmesan Shrimp</h1>
+              <p>Aenean faucibus nibh et justo cursus rutrum lorem imperdiet.</p>
+            </div>
+            <div id="dollar">$32</div>
+            </div>
+            <div class="foodimgbox"><a href="#"><img src="img/food6.jpg" alt="food3"></a>
+              <div class="foodtextbox">
+                <h1>A La Napolitana</h1>
+                <p>Aenean faucibus nibh et justo cursus rutrum lorem imperdiet.</p> 
+              </div>
+              <div id="dollar">$24</div>
+            </div>
+            <div class="foodimgbox"><a href="#"><img src="img/food7.jpg" alt="food3"></a>
+              <div class="foodtextbox">
+                <h1>Torchon Of Foie Gras</h1>
+                <p>Aenean faucibus nibh et justo cursus rutrum lorem imperdiet.</p>
+                </div>
+              <div id="dollar">$12</div>
+            </div>
+          </div>
+          </div>
+
+        <!--최근 레시피-->
+        <div class = "recent">
+          <div id="recenttext">
+            <div id="recentimg"><img src="img/ornament1.png" alt="ornament1"></div>
+              <h2 class="recenttext1">Recipes Gallery</h2>
+              <h3 class="recenttext2">-RECENT RECIPES -</h3>
+          </div>
+
+          <div id = "recentimg1">
+            <div class="boximg">
+              <div class="recipebox1">
+                <a href="#">
+                  <div class="iconwrapper">
+                  <div id="iconimg"><i class="fa-solid fa-magnifying-glass"></i></div></div>
+              </div></a>
+            </div>
+            <div class="boximg">
+              <div class="recipebox2">
+                <a href="#">
+                <div class="iconwrapper">
+                  <div id="iconimg"><i class="fa-solid fa-magnifying-glass"></i></div></div>
+              </div></a>
+            </div>
+            <div class="boximg">
+              <div class="recipebox3">
+                <a href="#">
+                <div class="iconwrapper">
+                  <div id="iconimg"><i class="fa-solid fa-magnifying-glass"></i></div></div>
+              </div></a>
+            </div>
+            <div class="boximg">
+              <div class="recipebox4">
+                <a href="#">
+                <div class="iconwrapper">
+                  <div id="iconimg"><i class="fa-solid fa-magnifying-glass"></i></div></div>
+              </div></a>
+            </div>
+            <div class="boximg">
+              <div class="recipebox5">
+                <a href="#">
+                <div class="iconwrapper">
+                  <div id="iconimg"><i class="fa-solid fa-magnifying-glass"></i></div></div>
+              </div></a>
+            </div>
+            <div class="boximg">
+              <div class="recipebox6">
+                <a href="#">
+                <div class="iconwrapper">
+                  <div id="iconimg"><i class="fa-solid fa-magnifying-glass"></i></div></div>
+              </div></a>
+            </div>
+          </div>
+        </div>
+
+       <!--팀소개-->
+        <div id="team">
+          <div class="teamtext">
+            <div class="teamimg"><img src="img/ornament.jpg" alt="ornament"></div>
+            <h2 class="teamtext1">The client is always right</h2>
+            <h3 class="teamtext2">-OUR LOVELY TEAM-</h3>
+            <p class="teamtext3">Look at your waiter's face. He knows. It's another reason to be polite to your
+              waiter: he could save your life with a raised eyebrow or a sigh</p>
+          </div>
+
+          <div id="peoplewrapper">
+            <div class="people"><img src="img/people1.jpg" alt="people1"></div>
+            <div class="people"><img src="img/people2.jpg" alt="people1"></div>
+            <div class="people"><img src="img/people3.jpg" alt="people1"></div>
+
+            <h4 class="teamtitle">Head of Staff</h4>
+          <h4 class="teamtitle">Manager</h4>
+          <h4 class="teamtitle">The Chef(Maestro)</h4>
+
+          <h5 class="teamname">marco buchary</h5>
+          <h5 class="teamname">silvia bruchio</h5>
+          <h5 class="teamname">antonia malovirto</h5>
+
+          <div id="social">
+            <a href="#"><div class="icon"><i class="fa-brands fa-facebook-f"></i></div></a>
+            <a href="#"><div class="icon"><i class="fa-brands fa-twitter"></i></div></a>
+            <a href="#"><div class="icon"><i class="fa-brands fa-linkedin-in"></i></div></a>
+            <a href="#"><div class="icon"><i class="fa-brands fa-google-plus-g"></i></div></a>
+          </div>
+
+          <div id="social2">
+            <a href="#"><div class="icon1"><i class="fa-brands fa-facebook-f"></i></div></a>
+            <a href="#"><div class="icon1"><i class="fa-brands fa-twitter"></i></div></a>
+            <a href="#"><div class="icon1"><i class="fa-brands fa-linkedin-in"></i></div></a>
+            <a href="#"><div class="icon1"><i class="fa-brands fa-google-plus-g"></i></div></a>
+          </div>
+
+          <div id="social3">
+            <a href="#"><div class="icon2"><i class="fa-brands fa-facebook-f"></i></div></a>
+            <a href="#"><div class="icon2"><i class="fa-brands fa-twitter"></i></div></a>
+            <a href="#"><div class="icon2"><i class="fa-brands fa-linkedin-in"></i></div></a>
+            <a href="#"><div class="icon2"><i class="fa-brands fa-google-plus-g"></i></div></a>
+          </div>
+          </div>
+
+          
+        </div>
+
+        <div id ="blog">
+          
+        </div>
+          
+      </section>
+
+      <footer>
+      </footer>
+  </body>
+</html>
